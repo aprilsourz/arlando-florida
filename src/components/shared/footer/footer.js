@@ -13,11 +13,11 @@ function Footer({location: {pathname}}) {
     if (loading) return <p className="text-center">Loading...</p>
 
     return (
-        <footer className={`bg-dark text-light footer ${pathname === '/contact' ? 'd-none' : ''}`}>
+        <footer className={`bg-dark text-pink footer ${pathname === '/contact' ? 'd-none' : ''}`}>
             <div className="container">
                 <div className="row align-content-center">
                     <div className="col-lg-6">
-                        <p className="mb-1">Say Hello:</p>
+                        <p className="mb-1">Contact for booking:</p>
                         <h2 className="mb-4 mb-lg-0">{person.email}</h2>
                     </div>
                     <div className="col-lg-6 d-flex align-items-center justify-content-end">

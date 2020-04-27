@@ -12,30 +12,30 @@ const Navbar = (props) => {
     const [isHome, setIsHome] = useState(false)
     const [isBgTransparent, setIsBgTransparent] = useState(false)
     const personContext = useContext(PersonContext)
-    const handleScroll = () => {
-        setIsHide(scrollPos < window.pageYOffset && window.pageYOffset > 50)
-        scrollPos = window.pageYOffset
-    }
+    // const handleScroll = () => {
+    //     setIsHide(scrollPos < window.pageYOffset && window.pageYOffset > 50)
+    //     scrollPos = window.pageYOffset
+    // }
 
-    useEffect(() => {
-        personContext.getPerson()
-        window.addEventListener('scroll', handleScroll)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(() => {
+    //     personContext.getPerson()
+    //     window.addEventListener('scroll', handleScroll)
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        setIsHome(window.location.pathname === '/')
-        setIsBgTransparent(window.location.pathname === '/contact')
-        setNavActive(false)
-    }, [props])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    //     setIsHome(window.location.pathname === '/')
+    //     setIsBgTransparent(window.location.pathname === '/contact')
+    //     setNavActive(false)
+    // }, [props])
 
-    useEffect(() => {
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    // useEffect(() => {
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll)
+    //     }
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
 
     const {person: {cvLink, name, position}, loading} = personContext
 
@@ -44,17 +44,17 @@ const Navbar = (props) => {
     return (
         <React.Fragment>
             <div className={`navigation 
-                           ${isBgTransparent ? '' : 'bg-white'}
+                           ${isBgTransparent ? '' : 'bg-pink'}
                            ${isHide ? 'hide' : ''}
                          `}>
                 <div className="container py-3">
                     <div className="d-flex justify-content-between align-items-center">
-                        <p className="m-0 w-50">
-                            I’m <b>{name}</b>:<br/>
+                        <p style={{fontSize: '20px'}} className="m-0 w-50">
+                            <b>{name}</b>:<br/>
                             {position}
                         </p>
 
-                        <div className="d-flex align-items-center ml-auto">
+                        {/* <div className="d-flex align-items-center ml-auto">
                             <div className={`mr-5 ${isHome ? 'd-none' : ''}`}>
                                 {cvLink &&
                                 <Link to={cvLink} target="_blank" className={`link-styled ${isBgTransparent ? 'alt' : ''}`}>
@@ -63,7 +63,7 @@ const Navbar = (props) => {
                                 }
                             </div>
                             <div className="nav-toggle" onClick={() => {setNavActive(true)}}/>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

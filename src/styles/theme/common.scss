@@ -2,6 +2,12 @@ html {
   font-size: 16px;
 }
 
-body {
+body,
+.navigation {
   overflow-x: hidden;
+  background-color: $pink;
+}
+
+a {
+  font-size: 20px
 }

@@ -24,11 +24,11 @@ const Home = () => {
                     <BigImage person={person}/>
                 </React.Fragment>
             )}
-            <ExperienceState>
+            {/* <ExperienceState>
                 <Experience/>
-            </ExperienceState>
+            </ExperienceState> */}
 
-            <TrustState>
+            {/* <TrustState>
                 <Trust/>
                 <div className="container pb-5 pb-lg-6">
                     <div className="row">
@@ -40,7 +40,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </TrustState>
+            </TrustState> */}
 
         </React.Fragment>
     )

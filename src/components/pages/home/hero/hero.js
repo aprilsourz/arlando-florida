@@ -13,7 +13,7 @@ const Hero = ({person: {heroText, cvLink, social, email}}) => {
                         <div className="col-md-9 min-vh-100 d-flex flex-column justify-content-between nav-height-padding">
                             <div className="my-auto" />
                             <div className="pt-5">
-                                <h1 className="mb-4 mt-0">{heroText}</h1>
+                                <h2 className="mb-4 mt-0">{heroText}</h2>
                                 <div className="d-flex flex-wrap">
                                     {social && social.map(i => (
                                         <a key={i.id} href={i.link} className="mr-4 text-body d-inline">{i.title}</a>
@@ -27,11 +27,11 @@ const Hero = ({person: {heroText, cvLink, social, email}}) => {
                         </div>
                         <div className="col-md-3 text-right mt-5 d-flex justify-content-between">
                             <img src={icon} alt="arrow" width="32" className="d-block d-md-none" />
-                            <div className="text-right w-100">
+                            {/* <div className="text-right w-100">
                                 <a href={cvLink} rel="noreferrer noopener" target="_blank" className="link-styled ml-auto">
                                     Download CV
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
