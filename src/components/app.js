@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import { AnimatedSwitch, spring } from 'react-router-transition'
 import Home from './pages/home/home'
 import Contact from './pages/contact/contact'
@@ -55,11 +55,11 @@ function App() {
                     mapStyles={mapStyles}
                     className="switch-wrapper">
                     <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
+                    {/* <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
                     <Route path="/portfolio" component={Projects}/>
-                    <Route path="/projects/:slug" component={SingleProject}/>
-                    <Route component={NoMatch}/>
+                    <Route path="/projects/:slug" component={SingleProject}/> */}
+                    <Route component={() => <Redirect to="/" />}/>
                 </AnimatedSwitch>
                 <Footer/>
             </Router>

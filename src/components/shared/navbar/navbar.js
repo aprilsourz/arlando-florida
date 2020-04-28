@@ -49,7 +49,7 @@ const Navbar = (props) => {
                          `}>
                 <div className="container py-3">
                     <div className="d-flex justify-content-between align-items-center">
-                        <p style={{fontSize: '20px'}} className="m-0 w-50">
+                        <p style={{fontSize: '24px'}} className="m-0 w-50">
                             <b>{name}</b>:<br/>
                             {position}
                         </p>
