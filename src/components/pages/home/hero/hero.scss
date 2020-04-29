@@ -2,4 +2,10 @@
   height: 80vh;
   display: flex;
   align-items: flex-end;
+
+  h2 {
+      @media screen and (max-width: 767px) {
+        font-size: 29px;
+      }
+  }
 }

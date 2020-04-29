@@ -36,22 +36,21 @@ const Hero = ({ person: { heroText, cvLink, social, email } }) => {
                 src={icon}
                 alt="arrow"
                 width="32"
-                className="d-none d-md-block"
               />
             </div>
-            <div className="col-md-3 text-right mt-5 d-flex justify-content-between">
+            {/* <div className="col-md-3 text-right mt-5 d-flex justify-content-between">
               <img
                 src={icon}
                 alt="arrow"
                 width="32"
                 className="d-block d-md-none"
-              />
+              /> */}
               {/* <div className="text-right w-100">
                                 <a href={cvLink} rel="noreferrer noopener" target="_blank" className="link-styled ml-auto">
                                     Download CV
                                 </a>
                             </div> */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
